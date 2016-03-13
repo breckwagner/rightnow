@@ -1,1 +1,4 @@
 *.pyc
+
+# This is to isolate postgresql from sqlite
+database.py
