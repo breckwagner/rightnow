@@ -1,11 +1,12 @@
 import tempfile
-
+import os
+#import psycopg2
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-database_file = '{}/test.db'.format(tempfile.gettempdir())
-engine = create_engine('sqlite:///{}'.format(database_file),
+#database_file = '{}/test.db'.format(tempfile.gettempdir())
+engine = create_engine(os.environ['DATABASE_URL'],
     convert_unicode=True)
 db_session = scoped_session(sessionmaker(autocommit=False,
                                          autoflush=False,
@@ -19,4 +20,4 @@ def init_db():
     # you will have to import them first before calling init_db()
     import models
     Base.metadata.create_all(bind=engine)
-    print "Created database: {}".format(database_file)
+    print "Created database"
