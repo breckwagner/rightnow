@@ -1,15 +1,15 @@
 <div id="right-now-form">
   <form id="finder-form">
-    <div id="form-views" ng-swipe-left="swipeLeft()" ui-view></div>
+    <div id="form-views" ng-swipe-left="swipeLeft()" ng-swipe-right="startOver()" ui-view></div>
   </form>
 </div>
 <div id="navbuttons">
-  <a href=""><span id="startOverButton" ng-hide="atStart" ng-click="startOver()">
-    < Start again.
-  </span></a>
-  <a href=""><span id="nextButton" ng-show="atEvent" ng-click="sendQuery()">
-    No good! Give me another! >
-  </span></a>
+  <a href="" class="button" id="startOverButton" ng-hide="atStart" ng-click="startOver()">
+    <span><</span> Start again
+  </a>
+  <a href="" class="button" id="nextButton" ng-show="atEvent" ng-click="sendQuery()">
+    Nope! Give me another! <span>></span>
+  </a>
 </div>
 
 <!-- <pre>

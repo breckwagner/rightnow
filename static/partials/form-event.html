@@ -4,8 +4,8 @@
     <span ng-show="randomText.type=='question'">?</span>
     <span ng-if="randomText.type=='exclamation'">!</span></span>
   </h2>
-  <h3 ng-hide="!meetJason.address">on {{ meetJason.address }}
-    <a class="address-link" ng-href="http://maps.google.com/?q={{meetJason.address}}" target=_blank><span class="icon-location"></span></a>
+  <h3 ng-hide="!meetJason.address">
+    <a class="address-link" ng-href="http://maps.google.com/?q={{meetJason.address}}" target=_blank><span class="icon-location"></span>{{ meetJason.address }}</a>
   </h3>
   <br />
   <p>

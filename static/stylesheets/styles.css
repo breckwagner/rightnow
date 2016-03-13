@@ -24,18 +24,78 @@ a, a:hover, a:active, a:visited, a:focus {
   right: 0px;
 }
 
+.button {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  position: relative;
+  background-color:rgba(0,0,0, 0.4);
+  color:rgb(255,255,255);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-decoration: none;
+
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
+.button:hover {
+  background-color: rgba(0,0,0, 0.6);
+}
+
 #startOverButton {
   float: left;
   margin-left: 10px;
-  text-decoration: underline;
   color: #fff;
+  padding-left: 60px;
 }
 
 #nextButton {
   float: right;
   margin-right: 10px;
-  text-decoration: underline;
   color: #fff;
+}
+
+.button span {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#startOverButton span {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  background-color:rgba(0,0,0,0.5);
+
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: 1px solid  rgba(0,0,0,0.15);
+}
+
+#nextButton span {
+  position: relative;
+  float: right;
+  width: 50px;
+  margin-right: -10px;
+  margin-left: 10px;
+  background-color:rgba(0,0,0,0.5);
+
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: 1px solid  rgba(0,0,0,0.15);
 }
 
 .form-sel {
